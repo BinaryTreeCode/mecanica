@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mecanica</title>
+    <style>
+        body{
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+</head>
+<body>
+    <form action="">
+        <label for="nombre">
+            <samp>ponga el nombre de la particula o cosa</samp>
+            <input type="text" id="nombre" placeholder="Nombre" value="partícula B">
+        </label>
+        <br>
+        <label for="masa">
+            <samp>ponga la masa de la particula o cosa</samp>
+            <input type="number" id="masa" placeholder="Kilo gramos">
+        </label>
+        <br>
+        <label for="Fuerza1">
+            <samp>ponga la fuerza en N de la fuerza 1</samp>
+            <input type="number" id="Fuerza1" placeholder="Fuerza1" value="0">
+        </label>
+        <label for="angulo1">
+            <samp>ponga el angulo en grados de la fuerza 1</samp>
+            <input type="number" id="Angulo1" placeholder="Angulo1" min="0" max="360" value="0">
+        </label>
+        <br>
+        <label for="Fuerza2">
+            <samp>ponga la fuerza en N de la fuerza 2</samp>
+            <input type="number" id="Fuerza2" placeholder="Fuerza2" value="0">
+        </label>
+        <label for="angulo2">
+            <samp>ponga el angulo en grados de la fuerza 2</samp>
+            <input type="number" id="Angulo2" placeholder="Angulo2" min="0" max="360" value="0">
+        </label>
+        <br>
+        <label for="Fuerza3">
+            <samp>ponga la fuerza en N de la fuerza 3</samp>
+            <input type="number" id="Fuerza3" placeholder="Fuerza3" value="0">
+        </label>
+        <label for="angulo3">
+            <samp>ponga el angulo en grados de la fuerza 3</samp>
+            <input type="number" id="Angulo3" placeholder="Angulo3" min="0" max="360" value="0">
+        </label>
+        <br>
+        <button type="button" onclick="datos_fuerza()">ver resultado de fuerza final</button>
+        <br>
+        <div class="caja2">
+            Newton=<inputF type="text">
+        </div> 
+        <div class="caja2">
+            Angulo=<inputA type="text">
+        </div>
+    </form>
+
+    <form action="">
+        <label for="velocidad">
+            <samp>ponga la velocidad inicial de la particula o cosa</samp>
+            <input type="text" id="velocidad" placeholder="velocidad de la particula"  value="5">
+        </label>
+        <br>
+        <label for="fricción">
+            <samp>ponga la fricción de la particula o cosa</samp>
+            <input type="number" id="fricción" placeholder="fricción" value="0">
+        </label>
+        <br>
+        <label for="segundos">
+            <samp>ponga los segundos que desea simular la particula</samp>
+            <input type="text" id="segundos" placeholder="metros a avansar" value="50">
+        </label>
+        <label for="btn_names">
+        <samp>enviar datos</samp>
+        <button type="button" onclick="operaciones()" id="btn_names" >generar particula</button>
+        </label>
+    </form>
+    <canvas id="canva_metros"></canvas>
+    <script src="./mecanica.js"></script>
+</body>
+</html>
+
